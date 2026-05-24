@@ -3,7 +3,7 @@ import axios from 'axios';
 import {useNavigate } from 'react-router-dom';
 
 // Configuration
-const backendURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
+
 
 const backendURL = window.location.hostname === "localhost"
   ? "http://localhost:3001"
