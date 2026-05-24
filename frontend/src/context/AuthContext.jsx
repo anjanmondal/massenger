@@ -5,7 +5,9 @@ import {useNavigate } from 'react-router-dom';
 // Configuration
 const backendURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
 
-
+const backendURL = window.location.hostname === "localhost"
+  ? "http://localhost:3001"
+  : window.location.origin;
 
 axios.defaults.baseURL = backendURL;
 axios.defaults.withCredentials = true;

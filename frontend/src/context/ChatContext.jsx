@@ -2,7 +2,9 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { io } from "socket.io-client"
 
-const backendURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:3001";
+const backendURL = window.location.hostname === "localhost"
+  ? "http://localhost:3001"
+  : window.location.origin;
 
 
 const socket = io(backendURL,{
