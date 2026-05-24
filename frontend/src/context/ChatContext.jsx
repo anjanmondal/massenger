@@ -59,7 +59,7 @@ export const ChatContextProvider = ({ children }) => {
       const res = await axios.get(
         `/api/messages/media/${currentUser._id}/${receiverId}`
       );
-      console.log(res)
+      
       setMedia(res.data);
     } catch (error) {
       console.log(error);
